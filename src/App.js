@@ -1,5 +1,13 @@
 import React from 'react';
+import  { Reviews }  from './components/Reviews'
+import './App.css'
 
-export default () => {
-    return <h1>Reviews App</h1>
-}
+function App() {
+    return (
+      <div className="App">
+        <Reviews />
+      </div>
+    );
+  }
+  
+  export default App;
