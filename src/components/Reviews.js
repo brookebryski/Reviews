@@ -3,7 +3,7 @@ import { reviewData } from '../data';
 import StarRatings from 'react-star-ratings';
 import './Review.css';  
 
-export const ReviewList = () => {
+export const Reviews = () => {
   return (  
       <div class="card">
       {reviewData.map((data, key) => {
