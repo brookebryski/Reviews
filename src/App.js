@@ -1,12 +1,12 @@
 import React from 'react';
-import { Reviews } from './components/Reviews';
+import  ReviewCollection  from './components/ReviewCollection';
 
-import './App.css'
+
 
 function App() {
     return (
       <div className="App">
-        <Reviews />
+        <ReviewCollection />
       </div>
     );
   }
