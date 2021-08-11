@@ -1,23 +1,29 @@
 import React from 'react';
 import { reviewData } from '../data';
 import StarRatings from 'react-star-ratings';
+import { Card } from 'react-bootstrap'
+import {  Row, Col } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import './Review.css';  
+
 
 export const Reviews = () => {
   return (  
-      <div class="card">
-      {reviewData.map((data, key) => {
+    <div class="card-deck">
+      {reviewData.map((data) => {
         return (
+         <div class="card">
           <div key={data.id}>
-            <h3 className="review-title">{data.place}</h3>
+            <h4 class="card-title">{data.place}</h4>
             <StarRatings
                 rating={data.rating}
                 starRatedColor="gold" 
                 starDimension="20px"
                 />
-            <p className="review-content">{data.content}</p>
-            <p className="review-author">{data.author}</p> 
+            <div class="card-body">{data.content}</div>
+            <div class="card-footer">{data.author} - {data.published_at}</div> 
             
+      </div>
       </div>
         );
       })}
