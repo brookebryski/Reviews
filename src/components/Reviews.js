@@ -1,9 +1,6 @@
 import React from 'react';
 import { reviewData } from '../data';
 import StarRatings from 'react-star-ratings';
-import { Card } from 'react-bootstrap'
-import {  Row, Col } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import './Review.css';  
 
 
