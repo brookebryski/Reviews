@@ -1,10 +1,10 @@
 import React from 'react';
-import ReviewItem from './ReviewItem';
+import ReviewCard from './ReviewCard';
 
 class ReviewCollection extends React.Component {
   render() {
       return (
-          <ReviewItem />
+          <ReviewCard />
       )
   }
 }

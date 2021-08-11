@@ -1,24 +1,24 @@
 import React from 'react';
-import { reviewData } from '../data';
+import { reviews } from '../data';
 import StarRatings from 'react-star-ratings';
 import './Review.css';  
 
 
- const ReviewItem = () => {
+ const ReviewCard = ({ review }) => {
   return (  
     <div class="card-deck">
-      {reviewData.map((data) => {
+      {reviews.map((review) => {
         return (
          <div class="card">
-          <div key={data.id}>
-            <h4 class="card-title">{data.place}</h4>
+          <div key={review.id}>
+            <h4 class="card-title">{review.place}</h4>
             <StarRatings
-                rating={data.rating}
+                rating={review.rating}
                 starRatedColor="gold" 
                 starDimension="20px"
                 />
-            <div class="card-body">{data.content}</div>
-            <div class="card-footer">{data.author} - {data.published_at}</div> 
+            <div class="card-body">{review.content}</div>
+            <div class="card-footer">{review.author} - {review.published_at}</div> 
             
       </div>
       </div>
@@ -28,4 +28,4 @@ import './Review.css';
           );
       };
   
-export default ReviewItem;
+export default ReviewCard;
