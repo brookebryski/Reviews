@@ -3,8 +3,7 @@ import { reviews } from '../data';
 import StarRatings from 'react-star-ratings';
 import './Review.css';  
 
-
- const ReviewCard = ({ review }) => {
+ const ReviewCard= ({ review }) => {
   return (  
     <div class="card-deck">
       {reviews.map((review) => {
@@ -24,7 +23,7 @@ import './Review.css';
       </div>
         );
       })}
-      </div>
+      </div> 
           );
       };
   
