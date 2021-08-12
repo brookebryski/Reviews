@@ -1,12 +1,14 @@
 import React from 'react';
 import ReviewCard from './ReviewCard';
 import { reviews } from '../data';
+import {reactLocalStorage} from 'reactjs-localstorage';
+import { browserHistory } from 'react-router';
 
 class ReviewCollection extends React.Component {
 
     goToDetails = (review) => {
-        localStorage.setReview('selectedReview', review);
-        this.props.history.push('/details');
+        reactLocalStorage.set('selectedReview', review);
+       browserHistory.push('/details');
       };
 
       render() {
