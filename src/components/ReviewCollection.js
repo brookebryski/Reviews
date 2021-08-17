@@ -26,4 +26,4 @@ class ReviewCollection extends React.Component {
       }
 }
 
-export default ReviewCollection;
+export default withRouter(ReviewCollection);
