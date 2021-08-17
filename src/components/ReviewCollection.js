@@ -2,7 +2,7 @@ import React from 'react';
 import ReviewCard from './ReviewCard';
 import { reviews } from '../data';
 import {reactLocalStorage} from 'reactjs-localstorage';
-import { browserHistory } from 'react-router';
+import { browserHistory, withRouter } from 'react-router';
 
 class ReviewCollection extends React.Component {
 
