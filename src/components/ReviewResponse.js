@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Comment = () => {
+const ReviewResponse = () => {
     return (
         <div>Hey</div>
     )
 }
 
-export default Comment;
+export default ReviewResponse;

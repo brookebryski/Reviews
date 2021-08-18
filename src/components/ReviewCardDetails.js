@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import StarRatings from "react-star-ratings";
-import Comment from './Comment';
+import ReviewResponseForm from './ReviewResponseForm';
 
 const ReviewCardDetails = () => {
   const location = useLocation();
@@ -24,7 +24,8 @@ const ReviewCardDetails = () => {
           </div>
         </div>
       </div>
-      <Comment />
+      <br></br>
+      <ReviewResponseForm />
     </div>
   );
 };
