@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import StarRatings from "react-star-ratings";
+import Comment from './Comment';
 
 const ReviewCardDetails = () => {
   const location = useLocation();
@@ -23,6 +24,7 @@ const ReviewCardDetails = () => {
           </div>
         </div>
       </div>
+      <Comment />
     </div>
   );
 };
