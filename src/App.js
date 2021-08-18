@@ -1,18 +1,16 @@
 import React from 'react';
 import  ReviewCollection  from './components/ReviewCollection';
-import  ReviewCard  from './components/ReviewCard';
-import { BrowserRouter, Router, Route } from 'react-router-dom'; 
-import history from './history';
+import  ReviewCardDetails  from './components/ReviewCardDetails';
+import { BrowserRouter as Router, Route } from 'react-router-dom'; 
 
 
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter >
-         <Router history={history} />
-         <ReviewCollection />
-          <Route path={"/details"} component={ReviewCard} />
-      </BrowserRouter>
+      <Router >
+         <Route exact path="/" component={ReviewCollection} />
+          <Route exact path="/details" component={ReviewCardDetails} />
+      </Router>
     );
   }
 }

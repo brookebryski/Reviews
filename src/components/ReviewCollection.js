@@ -1,14 +1,14 @@
 import React from 'react';
-import ReviewCard from './ReviewCard';
+import ReviewCardHeader from './ReviewCardHeader';
 import { reviews } from '../data';
-import {reactLocalStorage} from 'reactjs-localstorage';
-import { browserHistory, withRouter } from 'react-router';
+import { reactLocalStorage } from "reactjs-localstorage";
+import { withRouter } from "react-router-dom";
 
 class ReviewCollection extends React.Component {
 
     goToDetails = (review) => {
-        reactLocalStorage.set('selectedReview', review);
-       browserHistory.push('/details');
+     reactLocalStorage.set('selectedReview', review);
+     this.props.history.push({ pathname: "/details", state: { review } });
       };
 
       render() {
@@ -18,7 +18,7 @@ class ReviewCollection extends React.Component {
                     .filter((review, idx) => idx < 24)
                     .map((review) => (
                      <div onClick={() => this.goToDetails(review)}>
-                     <ReviewCard key={review.id} review={review} />
+                     <ReviewCardHeader key={review.id} review={review} />
                       </div>
                     ))}
             </div>
