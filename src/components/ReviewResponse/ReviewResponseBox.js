@@ -18,7 +18,7 @@ class ReviewResponseBox extends React.Component {
     let buttonText = 'Show Responses';
     
     if (this.state.showResponses) {
-      buttonText = 'Hide Responses';
+      buttonText = 'Hide Comments';
       reviewResponseNodes = <div className="reviewResponse-list">{reviewResponses}</div>;
     }
     
@@ -38,15 +38,15 @@ class ReviewResponseBox extends React.Component {
     );
   } // end render
   
-  addResponse(author, body) {
+  addResponse(review_id, author, body) {
     const reviewResponse = {
-      id: this.state.reviewResponses.length + 1,
+      review_id,
       author,
       body
     };
     this.setState({ reviewResponses: this.state.reviewResponses.concat([reviewResponse]) }); // *new array references help React stay fast, so concat works better than push here.
   }
-  
+   
   handleClick() {
     this.setState({
       showResponses: !this.state.showResponses
@@ -59,16 +59,16 @@ class ReviewResponseBox extends React.Component {
         <ReviewResponse 
           author={reviewResponse.author} 
           body={reviewResponse.body} 
-          key={reviewResponse.id} />
+          review_id={this.state.review_id} />
       ); 
     });
   }
   
   getResponsesTitle(reviewResponseCount) {
     if (reviewResponseCount === 0) {
-      return 'No reviewResponses yet';
+      return 'No responses yet';
     } else if (reviewResponseCount === 1) {
-      return "1 reviewResponse";
+      return "1 Response";
     } else {
       return `${reviewResponseCount} reviewResponses`;
     }
