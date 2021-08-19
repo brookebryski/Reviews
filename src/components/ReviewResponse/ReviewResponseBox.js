@@ -8,16 +8,12 @@ class ReviewResponseBox extends React.Component {
     
     this.state = {
       showResponses: false,
-      reviewResponses: [
-        {id: 1, author: "landiggity", body: "This is my first reviewResponse on this forum so don't be a dick"},
-        {id: 2, author: "scarlett-jo", body: "That's a mighty fine reviewResponse you've got there my good looking fellow..."},
-        {id: 3, author: "rosco", body: "What is the meaning of all of this 'React' mumbo-jumbo?"}
-      ]
+      reviewResponses: []
     };
   }
   
   render () {
-    const reviewResponses = this._getResponses();
+    const reviewResponses = this.getResponses();
     let reviewResponseNodes;
     let buttonText = 'Show Responses';
     
@@ -29,20 +25,20 @@ class ReviewResponseBox extends React.Component {
     return(
       <div className="reviewResponse-box">
         <h2>Join the Discussion!</h2>
-        <ReviewResponseForm addResponse={this._addResponse.bind(this)}/>
-        <button id="reviewResponse-reveal" onClick={this._handleClick.bind(this)}>
+        <ReviewResponseForm addResponse={this.addResponse.bind(this)}/>
+        <button id="reviewResponse-reveal" onClick={this.handleClick.bind(this)}>
           {buttonText}
         </button>
         <h3>Responses</h3>
         <h4 className="reviewResponse-count">
-          {this._getResponsesTitle(reviewResponses.length)}
+          {this.getResponsesTitle(reviewResponses.length)}
         </h4>
         {reviewResponseNodes}
       </div>  
     );
   } // end render
   
-  _addResponse(author, body) {
+  addResponse(author, body) {
     const reviewResponse = {
       id: this.state.reviewResponses.length + 1,
       author,
@@ -51,13 +47,13 @@ class ReviewResponseBox extends React.Component {
     this.setState({ reviewResponses: this.state.reviewResponses.concat([reviewResponse]) }); // *new array references help React stay fast, so concat works better than push here.
   }
   
-  _handleClick() {
+  handleClick() {
     this.setState({
       showResponses: !this.state.showResponses
     });
   }
   
-  _getResponses() {    
+  getResponses() {    
     return this.state.reviewResponses.map((reviewResponse) => { 
       return (
         <ReviewResponse 
@@ -68,7 +64,7 @@ class ReviewResponseBox extends React.Component {
     });
   }
   
-  _getResponsesTitle(reviewResponseCount) {
+  getResponsesTitle(reviewResponseCount) {
     if (reviewResponseCount === 0) {
       return 'No reviewResponses yet';
     } else if (reviewResponseCount === 1) {
