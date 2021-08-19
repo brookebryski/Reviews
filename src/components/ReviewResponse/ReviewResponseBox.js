@@ -1,78 +1,80 @@
-import React from 'React';
+import React from 'react';
+import ReviewResponse from './ReviewResponse';
+import ReviewResponseForm from './ReviewResponseForm';
 
 class ReviewResponseBox extends React.Component {
   constructor() {
     super();
     
     this.state = {
-      showComments: false,
-      comments: [
-        {id: 1, author: "landiggity", body: "This is my first comment on this forum so don't be a dick"},
-        {id: 2, author: "scarlett-jo", body: "That's a mighty fine comment you've got there my good looking fellow..."},
+      showResponses: false,
+      reviewResponses: [
+        {id: 1, author: "landiggity", body: "This is my first reviewResponse on this forum so don't be a dick"},
+        {id: 2, author: "scarlett-jo", body: "That's a mighty fine reviewResponse you've got there my good looking fellow..."},
         {id: 3, author: "rosco", body: "What is the meaning of all of this 'React' mumbo-jumbo?"}
       ]
     };
   }
   
   render () {
-    const comments = this._getComments();
-    let commentNodes;
-    let buttonText = 'Show Comments';
+    const reviewResponses = this._getResponses();
+    let reviewResponseNodes;
+    let buttonText = 'Show Responses';
     
-    if (this.state.showComments) {
-      buttonText = 'Hide Comments';
-      commentNodes = <div className="comment-list">{comments}</div>;
+    if (this.state.showResponses) {
+      buttonText = 'Hide Responses';
+      reviewResponseNodes = <div className="reviewResponse-list">{reviewResponses}</div>;
     }
     
     return(
-      <div className="comment-box">
+      <div className="reviewResponse-box">
         <h2>Join the Discussion!</h2>
-        <CommentForm addComment={this._addComment.bind(this)}/>
-        <button id="comment-reveal" onClick={this._handleClick.bind(this)}>
+        <ReviewResponseForm addResponse={this._addResponse.bind(this)}/>
+        <button id="reviewResponse-reveal" onClick={this._handleClick.bind(this)}>
           {buttonText}
         </button>
-        <h3>Comments</h3>
-        <h4 className="comment-count">
-          {this._getCommentsTitle(comments.length)}
+        <h3>Responses</h3>
+        <h4 className="reviewResponse-count">
+          {this._getResponsesTitle(reviewResponses.length)}
         </h4>
-        {commentNodes}
+        {reviewResponseNodes}
       </div>  
     );
   } // end render
   
-  _addComment(author, body) {
-    const comment = {
-      id: this.state.comments.length + 1,
+  _addResponse(author, body) {
+    const reviewResponse = {
+      id: this.state.reviewResponses.length + 1,
       author,
       body
     };
-    this.setState({ comments: this.state.comments.concat([comment]) }); // *new array references help React stay fast, so concat works better than push here.
+    this.setState({ reviewResponses: this.state.reviewResponses.concat([reviewResponse]) }); // *new array references help React stay fast, so concat works better than push here.
   }
   
   _handleClick() {
     this.setState({
-      showComments: !this.state.showComments
+      showResponses: !this.state.showResponses
     });
   }
   
-  _getComments() {    
-    return this.state.comments.map((comment) => { 
+  _getResponses() {    
+    return this.state.reviewResponses.map((reviewResponse) => { 
       return (
-        <Comment 
-          author={comment.author} 
-          body={comment.body} 
-          key={comment.id} />
+        <ReviewResponse 
+          author={reviewResponse.author} 
+          body={reviewResponse.body} 
+          key={reviewResponse.id} />
       ); 
     });
   }
   
-  _getCommentsTitle(commentCount) {
-    if (commentCount === 0) {
-      return 'No comments yet';
-    } else if (commentCount === 1) {
-      return "1 comment";
+  _getResponsesTitle(reviewResponseCount) {
+    if (reviewResponseCount === 0) {
+      return 'No reviewResponses yet';
+    } else if (reviewResponseCount === 1) {
+      return "1 reviewResponse";
     } else {
-      return `${commentCount} comments`;
+      return `${reviewResponseCount} reviewResponses`;
     }
   }
 } 

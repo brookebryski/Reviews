@@ -3,17 +3,17 @@ import React from 'react';
 class ReviewResponse extends React.Component {
     render () {
       return(
-        <div className="comment">
-          <p className="comment-header">{this.props.author}</p>
-          <p className="comment-body">- {this.props.body}</p>
-          <div className="comment-footer">
-            <a href="#" className="comment-footer-delete" onClick={this._deleteComment}>Delete Comment</a>
+        <div className="response">
+          <p className="response-header">{this.props.author}</p>
+          <p className="response-body">- {this.props.body}</p>
+          <div className="response-footer">
+            <a href="#" className="response-footer-delete" onClick={this._deleteResponse}>Delete response</a>
           </div>
         </div>
       );
     }
-    _deleteComment() {
-      alert("-- DELETE Comment Functionality COMMING SOON...");
+    _deleteResponse() {
+      alert("-- DELETE response Functionality COMMING SOON...");
     }
   }
   export default ReviewResponse;
