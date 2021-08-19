@@ -1,6 +1,6 @@
 import React from 'react';
 import ReviewCardHeader from './ReviewCardHeader';
-import { reviews } from '../data';
+import { reviews } from '../../data';
 import { reactLocalStorage } from "reactjs-localstorage";
 import { withRouter } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import StarRatings from "react-star-ratings";
-import ReviewResponseForm from './ReviewResponseForm';
+import ReviewResponse from "../ReviewResponse/ReviewResponse";
 
 const ReviewCardDetails = () => {
   const location = useLocation();
@@ -25,7 +25,8 @@ const ReviewCardDetails = () => {
         </div>
       </div>
       <br></br>
-      <ReviewResponseForm />
+       {/*add in conditional logic to render form if there is not a response and response if there is one*/} 
+       <ReviewResponse />
     </div>
   );
 };
