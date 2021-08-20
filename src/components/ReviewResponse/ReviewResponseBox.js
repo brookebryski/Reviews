@@ -1,6 +1,7 @@
 import React from 'react';
 import ReviewResponse from './ReviewResponse';
 import ReviewResponseForm from './ReviewResponseForm';
+import { reactLocalStorage } from "reactjs-localstorage";
 
 class ReviewResponseBox extends React.Component {
   constructor() {
@@ -9,7 +10,13 @@ class ReviewResponseBox extends React.Component {
     this.state = {
       reviewResponses: []
     };
-  }
+ }
+
+ //fetchResponses = () => {
+ // let reviewResponses = [];
+//  localStorage.setResponses
+//  reviewResponses.push(reviewResponse);
+//}
   
   render () {
     const reviewResponses = this.getResponses();
