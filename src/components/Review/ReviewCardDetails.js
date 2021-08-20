@@ -13,6 +13,7 @@ const ReviewCardDetails = () => {
     <div key={review.id} className="card-deck">
       <div className="card">
         <div>
+        <div className='card-container'>
           <h4 className="card-title">{review.place}</h4>
           <StarRatings
             rating={review.rating}
@@ -22,6 +23,7 @@ const ReviewCardDetails = () => {
           <div className="card-body">{review.content}</div>
           <div className="card-footer">
             {review.author} - {review.published_at}
+          </div>
           </div>
         </div>
       </div>

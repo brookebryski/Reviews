@@ -19,10 +19,15 @@ class ReviewCollection extends React.Component {
                     .filter((review, idx) => idx < 24)
                     .map((review) => (
                      <div onClick={() => this.goToDetails(review)}>
+                        <div className='card-collection-container'>
                      <ReviewCardHeader key={review.id} review={review} />
-                      </div>
+                     </div>
+                     </div>
+                    
                     ))}
-            </div>
+                     
+                    </div>
+                    
           )
       }
 }

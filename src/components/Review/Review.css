@@ -4,9 +4,24 @@
   grid-gap: 20px;
   width: 100%;
   padding: 20px;
-  background-color: white;
+  background-color: grey;
 }
 
 .card {
 background-color:white
+}
+.card-container {
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.card-collection-container {
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
