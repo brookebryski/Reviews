@@ -1,13 +1,12 @@
-.card-deck {
+.card-collection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   width: 100%;
   padding: 20px;
   background-color: white;
-  margin-bottom: 10px; 
 }
 
-.container {
-  display: flex;
+.card {
+background-color:white
 }

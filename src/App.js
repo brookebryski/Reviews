@@ -1,8 +1,9 @@
 import React from 'react';
 import  ReviewCollection  from './components/Review/ReviewCollection';
 import  ReviewCardDetails  from './components/Review/ReviewCardDetails';
-import { BrowserRouter as Router, Route } from 'react-router-dom'; 
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+ 
+document.body.setAttribute('style', 'background: grey;')
 
 class App extends React.Component {
   render() {

@@ -20,7 +20,6 @@ class ReviewResponseBox extends React.Component {
         {reviewResponses.length 
           ? (
             <>
-              <h3>Response</h3>
               {reviewResponseNodes}
             </>
           )

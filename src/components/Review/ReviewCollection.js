@@ -1,4 +1,5 @@
 import React from 'react';
+import './Review.css';
 import ReviewCardHeader from './ReviewCardHeader';
 import { reviews } from '../../data';
 import { reactLocalStorage } from "reactjs-localstorage";

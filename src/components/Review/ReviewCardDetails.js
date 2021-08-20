@@ -1,4 +1,5 @@
 import React from "react";
+import './Review.css';
 import { useLocation } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 import ReviewResponseBox from "../ReviewResponse/ReviewResponseBox";
@@ -25,9 +26,7 @@ const ReviewCardDetails = () => {
         </div>
       </div>
       <br></br>
-       {/*add in conditional logic to render form if there is not a response and response if there is one*/} 
     <ReviewResponseBox review_id={review.id}/>
-
     </div>
   );
 };
