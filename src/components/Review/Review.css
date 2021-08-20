@@ -10,12 +10,12 @@
 .card {
 background-color:white
 }
-.card-container {
+.card {
   width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: 0;
-    margin-left: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .card-collection-container {
