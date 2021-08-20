@@ -3,13 +3,13 @@ import React from "react";
 class ReviewResponseForm extends React.Component {
   render() {
     return (
-      <form className="comment-form" onSubmit={this.handleSubmit.bind(this)}>
-        <div className="comment-form-fields">
+      <form className="response-form" onSubmit={this.handleSubmit.bind(this)}>
+        <div className="response-form-fields">
           <input placeholder="Name" required ref={(input) => this.author = input}></input><br />
-          <textarea placeholder="Comment" rows="4" required ref={(textarea) => this.body = textarea}></textarea>
+          <textarea placeholder="Response" rows="4" required ref={(textarea) => this.body = textarea}></textarea>
         </div>
-        <div className="comment-form-actions">
-          <button type="submit">Post Comment</button>
+        <div className="response-form-actions">
+          <button type="submit">Post Response</button>
         </div>
       </form>
     );

@@ -26,7 +26,8 @@ const ReviewCardDetails = () => {
       </div>
       <br></br>
        {/*add in conditional logic to render form if there is not a response and response if there is one*/} 
-       <ReviewResponseBox review_id={review.id}/>
+      {/*<ReviewResponseBox review_id={review.id}/>*/}
+    <ReviewResponseBox review_id={review.id}/>
     </div>
   );
 };
