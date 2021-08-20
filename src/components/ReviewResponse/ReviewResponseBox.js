@@ -4,13 +4,13 @@ import ReviewResponseForm from "./ReviewResponseForm";
 
 class ReviewResponseBox extends React.Component {
   state = {
-    reviewResponses: JSON.parse(localStorage.getItem("reviewResponses")) || []
+    reviewResponses: JSON.parse(localStorage.getItem(`reviewResponses-${this.props.review_id}`)) || []
   };
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.reviewResponses !== this.state.reviewResponses) {
       localStorage.setItem(
-        "reviewResponses",
+        `reviewResponses-${this.props.review_id}`,
         JSON.stringify(this.state.reviewResponses)
       );
     }
