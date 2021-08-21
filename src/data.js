@@ -1,3 +1,5 @@
+// Array of review objects 
+
 export const reviews = [
     {
       "id": "5d707203b65083001e956f0a",

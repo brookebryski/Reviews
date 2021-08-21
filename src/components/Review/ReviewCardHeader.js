@@ -1,6 +1,8 @@
 import React from "react";
 import StarRatings from "react-star-ratings";
 
+// This exists so that the ReviewCollection component can render this as an array , and a user can click a one and be redirected to ReviewCardDetailsComponent
+
 const ReviewCardHeader = ({ review }) => {
   return (
     <div key={review.id} className="card-deck">

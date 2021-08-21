@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 import ReviewResponseBox from "../ReviewResponse/ReviewResponseBox";
 
+// This is rendered when a particular review is clicked. 
+
 const ReviewCardDetails = () => {
   const location = useLocation();
   const { review } = location?.state; // ? - optional chaining

@@ -1,9 +1,11 @@
 import React from 'react';
 import './Review.css';
 import ReviewCardHeader from './ReviewCardHeader';
-import { reviews } from '../../data';
+import { reviews } from '../../data'; // import array of review objects
 import { reactLocalStorage } from "reactjs-localstorage";
-import { withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom"; // Will allow me to redirect to ReviewCardDetails when ReviewHeader is clicked
+
+// This is the home page. It renders an array of ReviewHeader components. 
 
 class ReviewCollection extends React.Component {
 
@@ -32,4 +34,4 @@ class ReviewCollection extends React.Component {
       }
 }
 
-export default withRouter(ReviewCollection);
+export default withRouter(ReviewCollection); // We need to wrap the component with withRouter to use its history object etracted as a prop
