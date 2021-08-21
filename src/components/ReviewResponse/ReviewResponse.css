@@ -1,7 +1,5 @@
 .response {
- display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  width: 100%;
+  width: 80%;
   padding-right: 15px;
   padding-left: 15px;
   padding-top: 15px;
@@ -11,11 +9,22 @@
 
 .reply-icon {
   float: left;
+  margin: 10px;
+  margin-top: 0px;
 }
 
 .ellipsis {
   float: right;
 }
+
+.response-body {
+  opacity: 0.75;
+}
+
+.response-date {
+  opacity: 0.65;
+}
+
 
 
 

@@ -29,3 +29,11 @@
     display: flex;
    
 }
+
+.card-body {
+  opacity: 0.85;
+}
+
+.footer {
+  opacity: 0.65
+}

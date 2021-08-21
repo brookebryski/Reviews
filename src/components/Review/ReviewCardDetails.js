@@ -20,8 +20,11 @@ const ReviewCardDetails = () => {
             starDimension="20px"
           />
           <div className="card-body">{review.content}</div>
-          <div className="card-footer">
-            {review.author} - {review.published_at}
+          <div className="card-author">
+            {review.author} 
+          </div>
+          <div className="footer">
+           {review.published_at}
           </div>
         </div>
       </div>
