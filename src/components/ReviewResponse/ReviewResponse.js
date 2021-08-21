@@ -16,7 +16,7 @@ class ReviewResponse extends React.Component {
           <p className="response-header">{this.props.body}</p>
           <p className="response-body">- {this.props.author}</p>
           <div className="response-footer" >
-          <button onClick={() => this.handleClick()}>Edit</button>
+          <button class="ui button" onClick={() => this.handleClick()}>Edit</button>
             </div>
         </div>
       );
