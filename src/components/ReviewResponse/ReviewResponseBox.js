@@ -44,6 +44,7 @@ class ReviewResponseBox extends React.Component {
     }); // *new array references help React stay fast, so concat works better than push here.
   }
 
+  
   getResponses() {
     return this.state.reviewResponses.map((reviewResponse) => {
       return (

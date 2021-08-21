@@ -1,19 +1,24 @@
 import React from "react";
+import './ReviewResponse.css';
 
 class ReviewResponseForm extends React.Component {
   render() {
     return (
-      <form className="response-form" onSubmit={this.handleSubmit.bind(this)}>
-        <div className="response-form-fields">
-          <input placeholder="Name" required ref={(input) => this.author = input}></input><br />
-          <textarea placeholder="Response" rows="4" required ref={(textarea) => this.body = textarea}></textarea>
+      
+      <form class="ui form" onSubmit={this.handleSubmit.bind(this)}>
+        <div class="field">
+          <input placeholder="Name" required ref={(input) => this.author = input}></input>
+          <textarea placeholder="Response"  required ref={(textarea) => this.body = textarea}></textarea>
         </div>
         <div className="response-form-actions">
-          <button type="submit">Post Response</button>
+          <button class="ui button" type="submit">Post Response</button>
         </div>
       </form>
     );
   }
+
+
+ 
   
   handleSubmit(event) { 
     event.preventDefault();   // prevents page from reloading on submit
