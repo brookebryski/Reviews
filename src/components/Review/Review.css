@@ -8,14 +8,16 @@
 }
 
 .card {
-background-color:white
-}
-.card {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color:white;
+  align-items: stretch;
+  min-height: 300px;
+  justify-content: center;
+  align-self: center;
 }
 
 .card-collection-container {
@@ -24,4 +26,6 @@ background-color:white
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+   
 }
