@@ -4,7 +4,7 @@ import  ReviewCollection  from './components/Review/ReviewCollection';
 import  ReviewCardDetails  from './components/Review/ReviewCardDetails';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
  
-document.body.setAttribute('style', 'background: grey;')
+document.body.setAttribute('style', 'background: 	#A0A0A0;')
 
 class App extends React.Component {
   render() {

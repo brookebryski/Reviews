@@ -1,9 +1,10 @@
 .header {
     padding: 10px 0;
     text-align: left;
-    background: rgb(38, 76, 182);
+    background: rgb(47, 85, 190);
 }
 
 h2 {
+    margin-left: 90px;
     color:white;
 }
