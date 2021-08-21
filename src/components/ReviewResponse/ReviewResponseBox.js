@@ -5,9 +5,11 @@ import ReviewResponseForm from "./ReviewResponseForm";
 class ReviewResponseBox extends React.Component {
   state = {
     reviewResponses: JSON.parse(localStorage.getItem(`reviewResponses-${this.props.review_id}`)) || []
+    // when the component mounts, read from localStorage and set/initialize the state
+    // I decided to set up the state / logic to handle an array of reviewResponses in case one day in the future we decide we want to allow more than one response to the review
   };
-// I decided to set up the state to handle an array of reviewResponses in case one day in the future we decide we want to allow more than one response to the review
-  componentDidUpdate(prevProps, prevState) {
+
+  componentDidUpdate(prevProps, prevState) { // persist state changes to longer term storage when it's updated
     if (prevState.reviewResponses !== this.state.reviewResponses) {
       localStorage.setItem(
         `reviewResponses-${this.props.review_id}`,
@@ -23,12 +25,12 @@ class ReviewResponseBox extends React.Component {
     );
 
     return (
-      // This conditionally renders content based on whether or not a responds already exists for a review. If it does, we render it. If not, we render the form component and pass add response function as a prop
+      // I will conditionally render content based on whether or not a responnse already exists
       <div className="reviewResponse-box">
         {reviewResponses.length ? (
-          <>{reviewResponseNodes}</>
+          <>{reviewResponseNodes}</> // If it does, I display that response
         ) : (
-          <ReviewResponseForm addResponse={this.addResponse.bind(this)} />
+          <ReviewResponseForm addResponse={this.addResponse.bind(this)} /> // If it does not, I render the ReviewResponseForm and pass my addResponse method as a prop
         )}
       </div>
     );
