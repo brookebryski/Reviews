@@ -10,6 +10,8 @@ const ReviewCardDetails = () => {
 
   console.log("history location details: ", location);
   return (
+    <div class="container">
+    <div className="card-detail-container">
     <div key={review.id} className="card-deck">
       <div className="card">
         <div>
@@ -28,8 +30,10 @@ const ReviewCardDetails = () => {
           </div>
         </div>
       </div>
+      </div>
       <br></br>
     <ReviewResponseBox review_id={review.id}/>
+    </div>
     </div>
   );
 };
