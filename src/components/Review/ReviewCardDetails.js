@@ -5,6 +5,7 @@ import StarRatings from "react-star-ratings";
 import ReviewResponseBox from "../ReviewResponse/ReviewResponseBox";
 
 // This is rendered when a particular review is clicked. 
+// It will render ReviewResponseBox and pass the review_id as props. That component will handle reviewResponse logic
 
 const ReviewCardDetails = () => {
   const location = useLocation();
@@ -28,7 +29,7 @@ const ReviewCardDetails = () => {
             {review.author} 
           </div>
           <div className="footer">
-           {review.published_at}
+           {review.published_on}
           </div>
         </div>
       </div>

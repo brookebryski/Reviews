@@ -1,13 +1,12 @@
 import React from 'react';
 import './ReviewResponse.css';
-import ReviewResponseForm from "./ReviewResponseForm";
+// import ReviewResponseForm from "./ReviewResponseForm";
 
 class ReviewResponse extends React.Component {
-
-  handleClick() {
-   return <ReviewResponseForm />
-    }
-
+ 
+ // handleClick() {
+  // return <ReviewResponseForm />
+ //   }
     render () {
       return(
         <div className="response">
@@ -21,7 +20,7 @@ class ReviewResponse extends React.Component {
          <span class="response-content">
           <p className="response-body">{this.props.body}</p>
           <p className="response-author"> {this.props.author}</p> 
-          <p className="response-date">Date here</p> 
+          <p className="response-date">{new Date().toISOString().split("T")[0].replaceAll("-", "/")}</p> 
           <div className="response-footer">
           </div>
           </span>
@@ -29,7 +28,7 @@ class ReviewResponse extends React.Component {
             
       );
     }
-
+   
   }
   export default ReviewResponse;
   

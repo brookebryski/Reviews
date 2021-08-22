@@ -16,7 +16,7 @@ const ReviewCardHeader = ({ review }) => {
           />
           <div className="card-body">{review.content}</div>
           <div className="card-footer">
-            {review.author} - {review.published_at}
+            {review.author} - {review.published_on}
           </div>
         </div>
       </div>
