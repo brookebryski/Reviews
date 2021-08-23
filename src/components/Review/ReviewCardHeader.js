@@ -17,6 +17,11 @@ const ReviewCardHeader = ({ review }) => {
           <div className="card-body">{review.content}</div>
           <div className="card-footer">
             {review.author} - {review.published_on}
+            <br></br>
+            {/* I want to add code here to conditionally render this based on whether or not this review has a response
+            <i class="comment icon" style={{ color: 'blue' }}></i>
+            */}
+            
           </div>
         </div>
       </div>
