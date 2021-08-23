@@ -3,19 +3,18 @@ import './ReviewResponse.css';
  import ReviewResponseForm from "./ReviewResponseForm";
 
 class ReviewResponse extends React.Component {
-  // I struggled with trying to implement the 'edit' functionality 
-
-  // My idea was to set the initial state as a boolean, 'formOpen', and set it to false. This way when the edit icon is clicked the component re-renders, state is set to formOpen: true and the ReviewResponseForm renders
+  
+  // My idea is to set the initial state as a boolean, 'formOpen', and set it to false. This way when the edit icon is clicked the component re-renders, state is set to formOpen: true and the ReviewResponseForm renders
  state = {
   formOpen: false
  };
 
  handleClick() {
-  this.setState({formOpen: true && <ReviewResponseForm />})
-  console.log('click')}
+  this.setState({formOpen: true})
+ }
 
     render () {
-      return(
+      return isFormOpen ? (<ReviewResponseForm />) : (
         <div className="response">
           <span class="ellipsis">
            <i class="ellipsis horizontal icon" onClick={() => this.handleClick()} style={{ color: 'blue' }}>
