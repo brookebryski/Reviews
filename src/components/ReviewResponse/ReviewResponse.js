@@ -16,7 +16,7 @@ class ReviewResponse extends React.Component {
 }
  
     render () {
-     // return isFormOpen ? (<ReviewResponseForm />) : (
+     // return FormOpen ? (<ReviewResponseForm />) : (
        return (
         <div className="response">
           <span class="ellipsis">
