@@ -12,4 +12,4 @@ To install this application, run the following:
 
 - npm start to get the app running
 
-Then, navigate to localhost:3000 to find your next go-to spot!
+Then, navigate to localhost:3000 to find your next go-to spot!# AutKonnect
